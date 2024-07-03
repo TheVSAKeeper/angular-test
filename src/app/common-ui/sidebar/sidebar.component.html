@@ -1,0 +1,23 @@
+<mat-nav-list>
+    <ul class="main-menu-list">
+        @for (menuItem of menuItems; track menuItem.label) {
+            <li>
+                <a
+                        [routerLink]="[menuItem.link]"
+                        class="menu-item"
+                        routerLinkActive="active"
+                >
+                    <mat-icon>{{ menuItem.icon }}</mat-icon>
+                    <span>{{ menuItem.label }}</span>
+                </a>
+            </li>
+        }
+    </ul>
+</mat-nav-list>
+
+<footer class="sidebar__footer">
+    @if (me(); as me) {
+        <img ngSrc="/assets/images/user.png" alt="" height="140" width="140">
+        <div class="username-text">{{ me.email }}</div>
+    }
+</footer>

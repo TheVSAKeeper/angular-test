@@ -1,0 +1,40 @@
+<mat-card class="content">
+    <mat-card-header>
+        <h3>Hanko Profile</h3>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <div class="error">{{ error?.message }}</div>
+        <hanko-profile (onUserLoggedOut)="redirectToLogin()"></hanko-profile>
+    </mat-card-content>
+</mat-card>
+
+
+@if (user() != null) {
+    <mat-card class="content">
+        <mat-card-header>
+            <h3>{{ user()!.email }}</h3>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <p>Id: {{ user()!.id }}</p>
+            <p style="word-wrap: break-word;">Token: {{ userInfo?.token }}</p>
+            <pre>Payload:<div>{{ userInfo?.payload | json }}</div></pre>
+
+            <div>Webauthn Credentials:</div>
+            <mat-list>
+                @for (credential of user()!.webauthn_credentials; track user()!.id; ) {
+                    <mat-list-item>
+                        {{ credential }}
+                    </mat-list-item>
+                }
+
+            </mat-list>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-button (click)="getUserInfo()">Get Details</button>
+            <button mat-button (click)="logout()">Logout</button>
+        </mat-card-actions>
+    </mat-card>
+}
+

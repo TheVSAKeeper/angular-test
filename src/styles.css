@@ -9,9 +9,7 @@
   --dark-hover-color: #161616;
   --light-transparent-color: rgba(255, 255, 255, 0.75);
   --message-color: #404040;
-
   --light-border: 1px solid var(--light-color);
-
 }
 
 body {
@@ -36,3 +34,5 @@ dialog {
   border-radius: 5px;
   box-shadow: 0 0 30px 7px #111;
 }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  padding: 20px 12px;
+  position: relative;
+  background: var(--dark-trasparent-color);
+}
+
+.main-menu-list {
+  margin: 0 0 0 -40px;
+  display: grid;
+  grid-gap: 8px;
+  list-style: none;
+}
+
+.menu-item {
+  padding: 16px 12px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--light-color);
+  display: grid;
+  grid-template-columns: 16px 1fr max-content;
+  align-items: center;
+  grid-gap: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+  text-align: left;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.menu-item.active, .menu-item:hover, .menu-item:focus-visible {
+  background: var(--dark-hover-color);
+  color: var(--primary-color);
+}
+.menu-item.active .menu-item svg, .menu-item:hover .menu-item svg, .menu-item:focus-visible .menu-item svg {
+  color: var(--primary-color);
+}
+
+.sidebar__footer {
+  position: absolute;
+  width: calc(100% - 20px);
+  bottom: 20px;
+  background: var(--dark-trasparent-color);
+  border-radius: 2px;
+  padding: 4px 16px;
+  display: grid;
+  grid-template-columns: 32px 1fr 16px;
+  grid-gap: 12px;
+  align-items: center;
+}
+.sidebar__footer img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.sidebar__footer .username-text {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/*# sourceMappingURL=sidebar.component.css.map */
