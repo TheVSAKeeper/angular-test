@@ -1,0 +1,20 @@
+@if (forecasts) {
+
+    <div class="container">
+        @for (forecast of forecasts; track forecast.id) {
+            <app-weather-forecast [forecast]="forecast"></app-weather-forecast>
+        }
+    </div>
+
+    <hr>
+
+    <div class="container">
+        @for (forecast of ruForecasts; track forecast.id) {
+            <app-weather-forecast [forecast]="forecast"></app-weather-forecast>
+        }
+    </div>
+}
+
+<div class="buttons">
+    <button mat-raised-button (click)="refreshForecasts()">Refresh</button>
+</div>

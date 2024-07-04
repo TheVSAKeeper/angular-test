@@ -20,7 +20,7 @@ export class LoginPageComponent
     public redirectAfterLogin()
     {
         this.hankoService.updateUser()
-            .then(_ => this.router.navigate([''])
+            .then(_ => this.router.navigate(['profile'])
                 .catch((error) => (this.error = error)));
 
     }

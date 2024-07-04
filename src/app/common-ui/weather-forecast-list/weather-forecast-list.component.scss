@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  color: var(--dark-color);
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 12px;
+}

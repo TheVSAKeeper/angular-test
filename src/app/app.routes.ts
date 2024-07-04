@@ -4,6 +4,7 @@ import { ProfilePageComponent } from "./pages/profile-page/profile-page.componen
 import { accessGuard } from "./auth/access.guard";
 import { LayoutComponent } from "./common-ui/layout/layout.component";
 import { HomePageComponent } from "./pages/home-page/home-page.component";
+import { WeatherForecastPageComponent } from "./pages/weather-forecast-page/weather-forecast-page.component";
 
 export const routes: Routes = [
     {
@@ -18,11 +19,16 @@ export const routes: Routes = [
                 path: 'profile',
                 component: ProfilePageComponent
             },
+            {
+                path: 'weather',
+                component: WeatherForecastPageComponent
+            }
         ],
         canActivate: [accessGuard]
     },
     {
         path: 'login',
         component: LoginPageComponent
-    }
+    },
+
 ];

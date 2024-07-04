@@ -38,7 +38,12 @@ export class SidebarComponent implements OnInit
             label: 'Профиль',
             icon: 'account_circle',
             link: 'profile'
-        }
+        },
+        {
+            label: 'Прогноз погоды',
+            icon: 'cloud_circle',
+            link: 'weather'
+        },
     ]
 
     ngOnInit()

@@ -1,0 +1,16 @@
+@if (forecast) {
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{ getDayOfWeek(forecast.date.getDay()) }}</mat-card-title>
+            <mat-card-subtitle><br>{{ forecast.date.getDate() }}/{{ forecast.date.getMonth() }}/{{ forecast.date.getFullYear() }}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <br>
+            <p>{{ forecast.summary }}</p>
+            <p>Temperature: {{ forecast.temperatureC }}°C / {{ forecast.temperatureF }}°F</p>
+        </mat-card-content>
+    </mat-card>
+}
+
